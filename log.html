@@ -20,25 +20,19 @@
         </div>
     </header>
         <div id="main-title-buttons">
-            <a href=""><button class="title-button">Generator</button></a>
             <a href="about_us.html"><button class="title-button">About Us</button></a>
-            <a href="reg.html", style="margin-left: auto"><div id="title-profile"></div></a>
+            <a href="main.html"><button class="title-button">Home</button></a>
         </div>
 
     <main>
-        <p class="main-discription">Role Cards are a description of the game role that you can add when organizing your party. There are ready-made mafia basic rules cards on the site, but once you register, you can add your own roles!</p>
-        <div id="cards-list">
-            <div class="role-card">
-                <div class="card-title">
-                    <img src="assets/logo.svg" alt="" class="card-logo">
-                    <p class="card-name">Role Name</p>
-                </div>
-                <p class="card-description">DescriptionDescriptionDescriptionDescriptionDescription</p>
-                <div class="card-crate-info">
-                    <p>Author</p>
-                    <p>Date</p>
-                </div>
-            </div>
+        <div id="reg-form">
+            <p class="title-text-2">Your name:</p>
+            <input type="text" class="reg-form-input" maxlength="16" minlength="3" required>
+            <p class="title-text-2">Password:</p>
+            <input type="password" class="reg-form-input" maxlength="16" minlength="8" required>
+            <button id="reg-form-first-button"><p style="font-size: 2em; color: inherit;">Login</p></button>
+            <p>If you don't have an account:</p>
+            <a href="reg.html"><button id="reg-form-second-button"><p style="font-size: 1em; color: inherit;">Sign In</p></button></a>
         </div>
     </main>
 
@@ -57,5 +51,6 @@
             <a href="https://github.com/Prost0Iva"><img src="assets/gh.svg" alt="" class="footer-media-logo"></a>
         </div>
     </footer>
+
   </body>
 </html>

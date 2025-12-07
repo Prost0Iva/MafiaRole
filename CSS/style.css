@@ -45,17 +45,25 @@ header {
     top: 0;
 }
 
-.title-button {
-    height: 2em;
-    width: 6em;
+button {
     border: .2em solid #555555;
     border-radius: 1em;
     background-color: #FFFFFF;
     color: #555555;
     font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    border: .2em solid #ffffff;
+    background-color: #555555;
+    color: #ffffff;
+}
+
+.title-button {
+    height: 2em;
+    width: 6em;
     margin-left: .5em;
     margin-right: .5em;
-    cursor: pointer;
 }
 #title-profile {
     background-image: url(../assets/profile.svg);
@@ -65,12 +73,6 @@ header {
     height: 2em;
     margin-right: .5em;
     cursor: pointer;
-}
-
-.title-button:hover {
-    border: .2em solid #ffffff;
-    background-color: #555555;
-    color: #ffffff;
 }
 #title-profile:hover {
     background-image: url(../assets/profile_active.svg);
@@ -158,6 +160,30 @@ a:hover {
     text-decoration: underline;
 }
 
-#registration-form {
-    
+#reg-form {
+    display: grid;
+    justify-content: center;
+}
+.reg-form-input {
+    border: none;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 29.625em;
+    height: 3.969em;
+    border-radius: 1em;
+}
+
+#reg-form-buttons {
+    display: grid;
+    justify-content: center;
+}
+#reg-form-first-button {
+    width: 10.844em;
+    height: 3.25em;
+    margin-bottom: 1em;
+}
+#reg-form-second-button {
+    width: 6.656em;
+    height: 1.938em;
+    margin-top: 1em;
 }
