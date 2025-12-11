@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Arial', 'Times New Roman';
+    background-color: #a2a2a2;
+    background-image: url(../../assets/backgound.png);
+}
+
+p {
+    margin: 0;
+    color: #555555;
+    font-weight: bold;
+}
+
+header {
+    background-color: #DDDDDD;
+    height: 13em;
+    width: 100%;
+}
+
+#main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13em;
+}
+
+#title-logo {
+    width: 6em;
+}
+
+.title-text-1 {
+    font-size: 4em;
+}
+.title-text-2 {
+    font-size: 2em;
+}
+
+#main-title-buttons {
+    display: flex;
+    background-color: #555555;
+    align-items: center;
+    height: 3em;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+button {
+    border: .2em solid #555555;
+    border-radius: 1em;
+    background-color: #FFFFFF;
+    color: #555555;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    border: .2em solid #ffffff;
+    background-color: #555555;
+    color: #ffffff;
+}
+
+.title-button {
+    height: 2em;
+    width: 6em;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+#title-profile {
+    background-image: url(../../assets/profile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 2em;
+    height: 2em;
+    margin-right: .5em;
+    cursor: pointer;
+}
+#title-profile:hover {
+    background-image: url(../../assets/profile_active.svg);
+}
+
+main {
+    background-color: #DDDDDD;
+    min-height: 100vh;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1em;
+}
+.main-discription {
+    font-size: 1.375em;
+}
+#cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#page-buttons {
+    display: flex;
+}
+#pre-page {
+    margin-top: 1em;
+    margin-left: auto;
+    width: 3em;
+}
+#next-page {
+    margin-top: 1em;
+    margin-right: auto;
+    width: 3em;
+}
+.role-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    width: 7.144em;
+    height: 11.05em;
+    border: .2em solid #555555;
+    border-radius: .5em;
+    padding: .2em;
+    margin: .5em;
+}
+.card-title {
+    display: flex;
+    align-items: center;
+}
+.card-logo {
+    width: 3.125em;
+}
+.card-name {
+    margin-left: .2em;
+}
+.card-description {
+    word-wrap: break-word;
+    width: 6.719em;
+    height: 6.188em;
+}
+.card-crate-info {
+    margin-top: auto;
+    font-size: 0.75em;
+}
+
+footer {
+    display: flex;
+    background-color: #555555;
+    height: 3.125em;
+    width: 100%;
+    align-items: center;
+}
+.footer-text {
+    color: #999999;
+    font-weight: lighter;
+    font-size: 0.625em;
+}
+#footer-contacts {
+    padding-left: 1.25em;
+    margin-right:auto;
+}
+#footer-license {
+    margin-right:auto;
+    margin-left:auto;
+}
+#footer-media {
+    padding-right: 1.25em;
+    margin-left:auto;
+}
+.footer-media-logo {
+    width: 1.25em;
+}
+
+a {
+    text-decoration: none;
+    color: #999999;
+    transition: all 0.3s ease;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+#reg-form {
+    display: grid;
+    justify-content: center;
+}
+.reg-form-input {
+    border: none;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 29.625em;
+    height: 3.969em;
+    border-radius: 1em;
+}
+
+#reg-form-buttons {
+    display: grid;
+    justify-content: center;
+}
+#reg-form-first-button {
+    width: 10.844em;
+    height: 3.25em;
+    margin-bottom: 1em;
+}
+#reg-form-second-button {
+    width: 6.656em;
+    height: 1.938em;
+    margin-top: 1em;
+}
