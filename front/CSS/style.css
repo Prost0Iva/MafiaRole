@@ -65,7 +65,7 @@ button:hover {
     margin-left: .5em;
     margin-right: .5em;
 }
-#title-profile {
+#profile-icon {
     background-image: url(../../assets/profile.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -74,7 +74,7 @@ button:hover {
     margin-right: .5em;
     cursor: pointer;
 }
-#title-profile:hover {
+#profile-icon:hover {
     background-image: url(../../assets/profile_active.svg);
 }
 
@@ -117,6 +117,7 @@ main {
     border-radius: .5em;
     padding: .2em;
     margin: .5em;
+    margin-bottom: 2em;
 }
 .card-title {
     display: flex;
@@ -201,4 +202,404 @@ a:hover {
     width: 6.656em;
     height: 1.938em;
     margin-top: 1em;
+}
+
+#reg-form {
+    display: grid;
+}
+
+/* ========== СТИЛИ ДЛЯ МОДАЛЬНЫХ ОКОН ========== */
+
+/* Фон модального окна */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* Основное модальное окно */
+.modal {
+    background-color: #DDDDDD;
+    border-radius: .5em;
+    border: .2em solid #555555;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Заголовок модального окна */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #555555;
+    border-bottom: .2em solid #555555;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+/* Кнопка закрытия в твоём стиле */
+.close-modal-btn {
+    background: none;
+    border: .2em solid #FFFFFF;
+    border-radius: 1em;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    line-height: 1;
+    padding: 0;
+}
+
+.close-modal-btn:hover {
+    border: .2em solid #555555;
+    background-color: #FFFFFF;
+    color: #555555;
+}
+
+/* Тело модального окна */
+.modal-body {
+    padding: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+/* Подвал модального окна */
+.modal-footer {
+    padding: 15px 20px;
+    border-top: .2em solid #555555;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    background-color: #DDDDDD;
+}
+
+/* Форма в модальном окне */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555555;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: .2em solid #555555;
+    border-radius: 1em;
+    background-color: #FFFFFF;
+    color: #555555;
+    font-weight: bold;
+    font-size: 1em;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border: .2em solid #999999;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Счётчик символов */
+.char-counter {
+    display: block;
+    text-align: right;
+    font-size: 0.8em;
+    color: #999999;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+/* ========== КНОПКИ В ТВОЁМ СТИЛЕ ========== */
+
+/* Основные кнопки */
+.btn-primary,
+.btn-secondary {
+    border: .2em solid #555555;
+    border-radius: 1em;
+    background-color: #FFFFFF;
+    color: #555555;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 1em;
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    border: .2em solid #FFFFFF;
+    background-color: #555555;
+    color: #FFFFFF;
+}
+
+/* Дополнительные кнопки (редактировать/удалить) */
+.edit-card-modal-btn,
+.delete-card-modal-btn {
+    border: .2em solid #555555;
+    border-radius: 1em;
+    background-color: #FFFFFF;
+    color: #555555;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.edit-card-modal-btn:hover {
+    border: .2em solid #FFFFFF;
+    background-color: #555555;
+    color: #FFFFFF;
+}
+
+.delete-card-modal-btn:hover {
+    border: .2em solid #FFFFFF;
+    background-color: #555555;
+    color: #FFFFFF;
+}
+
+/* Кнопка закрытия полная */
+.close-full-btn {
+    border: .2em solid #555555;
+    border-radius: 1em;
+    background-color: #FFFFFF;
+    color: #555555;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 1em;
+    min-width: 100px;
+}
+
+.close-full-btn:hover {
+    border: .2em solid #FFFFFF;
+    background-color: #555555;
+    color: #FFFFFF;
+}
+
+/* Кнопка просмотра карточки на главной */
+.view-card-btn {
+    border: .2em solid #555555;
+    border-radius: 1em;
+    background-color: #FFFFFF;
+    color: #555555;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 0.8em;
+    width: calc(100% - 1em);
+    margin: 0.5em;
+    transition: all 0.3s ease;
+}
+
+.view-card-btn:hover {
+    border: .2em solid #FFFFFF;
+    background-color: #555555;
+    color: #FFFFFF;
+}
+
+/* ========== МОДАЛЬНОЕ ОКНО ПРОСМОТРА КАРТОЧКИ ========== */
+
+.card-modal {
+    max-width: 500px;
+}
+
+.card-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #555555;
+    border-bottom: .2em solid #555555;
+}
+
+.card-modal-header h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.card-modal-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.card-modal-content {
+    padding: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.card-modal-description {
+    margin-bottom: 20px;
+}
+
+.card-modal-description h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #555555;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.card-modal-description p {
+    color: #555555;
+    line-height: 1.5;
+    white-space: pre-line;
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: .5em;
+    border: .2em solid #555555;
+    margin: 0;
+    font-weight: bold;
+}
+
+.card-modal-info {
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: .5em;
+    border: .2em solid #555555;
+}
+
+.info-item {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-item strong {
+    min-width: 120px;
+    color: #555555;
+    font-weight: bold;
+}
+
+.info-item span {
+    color: #555555;
+    font-weight: normal;
+}
+
+/* ========== КАРТОЧКИ С ОБРЕЗАННЫМ ТЕКСТОМ ========== */
+
+.card-description {
+    color: #555555;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    max-height: 4.2em; /* Ограничение на 3 строки */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+
+/* ========== КНОПКА СОЗДАНИЯ КАРТОЧКИ ========== */
+
+#create-card-btn-global {
+    border: .2em solid #555555;
+    border-radius: 1em;
+    background-color: #FFFFFF;
+    color: #555555;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    margin: 20px auto;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+#create-card-btn-global:hover {
+    border: .2em solid #FFFFFF;
+    background-color: #555555;
+    color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+
+@media (max-width: 768px) {
+    .modal {
+        max-height: 95vh;
+        margin: 10px;
+    }
+    
+    .card-modal-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .card-modal-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .info-item {
+        flex-direction: column;
+    }
+    
+    .info-item strong {
+        margin-bottom: 5px;
+        min-width: auto;
+    }
+    
+    .modal-header,
+    .card-modal-header {
+        padding: 10px 15px;
+    }
+    
+    .modal-body,
+    .card-modal-content {
+        padding: 15px;
+    }
+    
+    .btn-primary,
+    .btn-secondary,
+    .close-full-btn {
+        padding: 8px 15px;
+        min-width: 100px;
+        font-size: 0.9em;
+    }
 }

@@ -16,8 +16,9 @@ export async function findData(whatFind, whereFind, byWhat, value) {
     });
 
     const data = await response.json();
-    console.log(JSON.stringify(data, null, 2));
-  } catch (error) {
+    return data;
+  }
+  catch (error) {
     console.log(`Ошибка: ${error.message}</div>`);
   }
 }

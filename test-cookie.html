@@ -1,0 +1,43 @@
+<!-- test-cookies.html в корне проекта -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Cookies</title>
+</head>
+<body>
+    <h1>Test Cookies</h1>
+    <button onclick="setTestCookie()">Set Test Cookie</button>
+    <button onclick="getCookies()">Get Cookies</button>
+    <button onclick="testSession()">Test Session</button>
+    <div id="result"></div>
+    
+    <script>
+        function setTestCookie() {
+            document.cookie = "test_cookie=hello; max-age=3600; path=/; samesite=none";
+            document.getElementById('result').textContent = 'Cookie set: ' + document.cookie;
+        }
+        
+        function getCookies() {
+            document.getElementById('result').textContent = 'Cookies: ' + document.cookie;
+        }
+        
+        async function testSession() {
+            const response = await fetch('http://localhost:3000/api/auth/check', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            const data = await response.json();
+            document.getElementById('result').innerHTML = `
+                <h3>Session Test Result:</h3>
+                <pre>${JSON.stringify(data, null, 2)}</pre>
+                <p>Response Cookies: ${response.headers.get('set-cookie')}</p>
+                <p>Browser Cookies: ${document.cookie}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
